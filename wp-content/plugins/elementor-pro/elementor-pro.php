@@ -4,8 +4,8 @@
  * Description: Elevate your designs and unlock the full power of Elementor. Gain access to dozens of Pro widgets and kits, Theme Builder, Pop Ups, Forms and WooCommerce building capabilities.
  * Plugin URI: https://go.elementor.com/wp-dash-wp-plugins-author-uri/
  * Author: Elementor.com
- * Version: 3.15.0
- * Elementor tested up to: 3.15.0
+ * Version: 3.17.1
+ * Elementor tested up to: 3.17.0
  * Author URI: https://go.elementor.com/wp-dash-wp-plugins-author-uri/
  *
  * Text Domain: elementor-pro
@@ -23,7 +23,7 @@ add_action( 'plugins_loaded', function() {
 	add_filter( 'pre_http_request', function( $pre, $parsed_args, $url ) {
 		if ( strpos( $url, 'my.elementor.com/api/v2/licenses' ) !== false ) {
 			return [
-				'response' => [ 'code' => 200, 'message' => 'ОК' ],
+				'response' => [ 'code' => 200, 'message' => 'OK' ],
 				'body'     => json_encode( [ 'success' => true, 'license' => 'valid', 'expires' => '01.01.2030' ] )
 			];
 		} elseif ( strpos( $url, 'my.elementor.com/api/connect/v1/library/get_template_content' ) !== false ) {
@@ -39,16 +39,16 @@ add_action( 'plugins_loaded', function() {
 	}, 10, 3 );
 } );
 
-define( 'ELEMENTOR_PRO_VERSION', '3.15.0' );
+define( 'ELEMENTOR_PRO_VERSION', '3.17.1' );
 
 /**
  * All versions should be `major.minor`, without patch, in order to compare them properly.
  * Therefore, we can't set a patch version as a requirement.
- * (e.g. Core 3.14.0-beta1 and Core 3.14.0-cloud2 should be fine when requiring 3.14, while
- * requiring 3.14.2 is not allowed)
+ * (e.g. Core 3.15.0-beta1 and Core 3.15.0-cloud2 should be fine when requiring 3.15, while
+ * requiring 3.15.2 is not allowed)
  */
-define( 'ELEMENTOR_PRO_REQUIRED_CORE_VERSION', '3.13' );
-define( 'ELEMENTOR_PRO_RECOMMENDED_CORE_VERSION', '3.15' );
+define( 'ELEMENTOR_PRO_REQUIRED_CORE_VERSION', '3.15' );
+define( 'ELEMENTOR_PRO_RECOMMENDED_CORE_VERSION', '3.17' );
 
 define( 'ELEMENTOR_PRO__FILE__', __FILE__ );
 define( 'ELEMENTOR_PRO_PLUGIN_BASE', plugin_basename( ELEMENTOR_PRO__FILE__ ) );
