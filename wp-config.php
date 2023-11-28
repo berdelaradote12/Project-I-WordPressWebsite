@@ -23,7 +23,7 @@
 define( 'DB_NAME', 'project-i_wp-db' );
 
 /** Database username */
-define( 'DB_USER', 'berd24dote' );
+define( 'DB_USER', 'dororopeach' );
 
 /** Database password */
 define( 'DB_PASSWORD', 'xgrC)VKE9)ZZX0KT' );
